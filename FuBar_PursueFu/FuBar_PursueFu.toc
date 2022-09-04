@@ -2,14 +2,13 @@
 
 ## Title: FuBar - |cffffffffPursue|r|cff00ff00Fu|r
 ## Notes: Easily change tracking abilities with FuBar.
-## Version: 1
-## X-ReleaseDate: $Date: 2006-10-04 18:33:55 -0400 (Wed, 04 Oct 2006) $
-## Author: Eternally777
-## X-eMail: Eternally777@gmail.com
+## Version: 1.1
+## X-ReleaseDate: 2022-09-04 
+## Author: Eternally777, Layt
+## X-eMail: laytya@github
 ## X-Credits: Corgi
 ## X-Category: Tradeskill
 
-## X-RelSite-Curse: 5396
 
 ## OptionalDeps: FuBar
 ## X-Embeds: Ace2, FuBarPlugin-2.0, BabbleLib, CrayonLib, DewdropLib, TabletLib
