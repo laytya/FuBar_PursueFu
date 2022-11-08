@@ -20,10 +20,10 @@ PursueFu.overrideMenu = false
 --[[---------------------------------------------------------------------------------
  IMPORTANT TABLES
 ------------------------------------------------------------------------------------]]
-local spellNames = { BS["Find Herbs"], BS["Find Minerals"], BS["Find Treasure"],
-	BS["Track Beasts"], BS["Track Humanoids"], BS["Track Hidden"], BS["Track Elementals"],
-	BS["Track Undead"], BS["Track Demons"], BS["Track Giants"], BS["Track Dragonkin"],
-	BS["Sense Undead"], BS["Sense Demons"]
+local spellNames = { BS"Find Herbs", BS"Find Minerals", BS"Find Treasure",
+	BS"Track Beasts", BS"Track Humanoids", BS"Track Hidden", BS"Track Elementals",
+	BS"Track Undead", BS"Track Demons", BS"Track Giants", BS"Track Dragonkin",
+	BS"Sense Undead", BS"Sense Demons"
 }
 
 local profileDefaults = {
