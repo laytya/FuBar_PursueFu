@@ -28,9 +28,9 @@ AceLibrary("AceLocale-2.1"):RegisterTranslation("FuBar_PursueFu", "ruRU", functi
 		["Herbs"] = "Травы",
 		["Mines"] = "Руды",
 		["Chests"] = "Сундуки",
-		["/db herbs"] = nil,
-		["/db mines"] = nil,
-		["/db chests"] = nil,
+		["/db herbs"] = "/db herbs",
+		["/db mines"] = "/db mines",
+		["/db chests"] = "/db chests",
 		
 	}	
 end)
