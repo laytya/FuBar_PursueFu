@@ -20,10 +20,10 @@ PursueFu.overrideMenu = false
 --[[---------------------------------------------------------------------------------
  IMPORTANT TABLES
 ------------------------------------------------------------------------------------]]
-local spellNames = { "Find Herbs", "Find Minerals", "Find Treasure",
-	"Track Beasts", "Track Humanoids", "Track Hidden", "Track Elementals",
-	"Track Undead", "Track Demons", "Track Giants", "Track Dragonkin",
-	"Sense Undead", "Sense Demons"
+local spellNames = { BS"Find Herbs", BS"Find Minerals", BS"Find Treasure",
+	BS"Track Beasts", BS"Track Humanoids", BS"Track Hidden", BS"Track Elementals",
+	BS"Track Undead", BS"Track Demons", BS"Track Giants", BS"Track Dragonkin",
+	BS"Sense Undead", BS"Sense Demons"
 }
 
 local profileDefaults = {
@@ -52,17 +52,17 @@ PursueFu.OnMenuRequest = {
 			type = "header",
 			order = 900,
 		},
-		[ L["Minimap"] ] = {
+		[ "Minimap" ] = {
 			name = L["Show Minimap Icon"], type = "toggle",
 			desc = L["Show the minimap tracking icon."], order = 901,
 			get = "GetMiniMap", set = "SetMiniMap"
 		},
-		[ L["Hint"] ] = {
+		[ "Hint" ] = {
 			name = L["Show Tooltip Hint"], type = "toggle",
 			desc = L["Show the hint at the bottom of the FuBar tooltip."], order = 902,
 			get = "GetTooltipHint", set = "SetTooltipHint"
 		},
-		[ L["Reminder"] ] = {
+		[ "Reminder" ] = {
 			name = L["Post-Mortem Reminder"], type = "toggle",
 			desc = L["Remind me upon resurrection that my tracking has been deactivated."], order = 903,
 			get = "GetReminder", set = "SetReminder"
