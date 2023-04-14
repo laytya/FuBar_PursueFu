@@ -6,6 +6,7 @@ AceLibrary("AceLocale-2.1"):RegisterTranslation("FuBar_PursueFu", "ruRU", functi
 		["Minimap"] = "Миникарта",
 		["Show Minimap Icon"] = "Показать значок миникарты",
 		["Show the minimap tracking icon."] = "Показать значок отслеживания на миникартке.",
+		["Left-click to toggle next ability."] = "Левая кнопка мыши включает следующую способность отслеживания.",
 		["Right-click to switch abilites."] = "Щелкните правой кнопкой мыши для переключения способностей.",
 		
 		["Hint"] = "Совет",

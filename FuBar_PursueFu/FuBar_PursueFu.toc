@@ -3,7 +3,7 @@
 ## Title: FuBar - |cffffffffPursue|r|cff00ff00Fu|r
 ## Notes: Easily change tracking abilities with FuBar.
 ## Notes-ruRU: Легкое изменение отслеживаемых способностей с FuBar.
-## Version: 1.1
+## Version: 1.2
 ## X-ReleaseDate: 2022-09-04 
 ## Author: Eternally777, Layt
 ## X-eMail: laytya@github

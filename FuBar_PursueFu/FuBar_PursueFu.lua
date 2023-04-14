@@ -37,6 +37,7 @@ local profileDefaults = {
 
 local charDefaults = {
 	spellsDirty = true,
+	lastSpell = "",
 	spells = {}
 }
 
@@ -147,19 +148,40 @@ end
  CORE
 ------------------------------------------------------------------------------------]]
 function PursueFu:PopulateDB(meta)
-	if self.db.profile[meta] then
+	if self.db.profile[meta] and pfDatabase then
 		SlashCmdList["PFDB"](meta)
 	end
 end
 
 function PursueFu:SetDBmeta(field, value)
-	print("PursueFu:", field, value)
 	self.db.profile[field] = value
 	self:PopulateDB(field)
 end
 function PursueFu:GetDBmeta(field)
-	print("PursueFu:", field, self.db.profile[field])
 	return self.db.profile[field]
+end
+
+function PursueFu:GetNextSpell(spell)
+	local n , nspell = false, ""
+	if not spell or spell == "" then
+	  nspell = next(self.db.char.spells)
+	  return nspell
+	end
+
+	for k, v in pairs(self.db.char.spells) do
+	  
+	  if n then
+		 nspell = k
+		 return nspell
+	  end
+	  if spell == k then
+		 n = true
+	  end
+	end
+	if nspell == "" then
+	  nspell = next(self.db.char.spells)
+	end
+	return nspell
 end
 
 function PursueFu:CompileSpells()
@@ -273,6 +295,10 @@ function PursueFu:CompileSpells()
 	--]]
 end
 
+function PursueFu:OnClick(button)
+	self:ToggleTrackingSpell(self:GetNextSpell(self.db.char.lastSpell))
+end
+	
 function PursueFu:FindTracking(theTexture)
 	for i, v in ipairs(spellNames) do
 		if ( theTexture == BS:GetSpellIcon(v) ) then
@@ -296,6 +322,7 @@ function PursueFu:ToggleTrackingSpell(v)
 		CastSpellByName(v)
 		self:SetIcon(self.db.char.spells[v])
 		self:SetText(v)
+		self.db.char.lastSpell = v
 	end
 	D:Close(1)
 	self:UpdateData()
@@ -360,6 +387,6 @@ function PursueFu:OnTooltipUpdate()
 		end
 	end
 	if ( self.db.profile.showHint == true ) then
-		T:SetHint(L["Right-click to switch abilites."])
+		T:SetHint(L["Left-click to toggle next ability."].."\n"..L["Right-click to switch abilites."])
 	end
 end

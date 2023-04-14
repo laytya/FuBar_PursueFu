@@ -6,6 +6,7 @@ AceLibrary("AceLocale-2.1"):RegisterTranslation("FuBar_PursueFu", "enUS", functi
 		["Minimap"] = true,
 		["Show Minimap Icon"] = true,
 		["Show the minimap tracking icon."] = true,
+		["Left-click to toggle next ability."] = true,
 		["Right-click to switch abilites."] = true,
 		
 		["Hint"] = true,
